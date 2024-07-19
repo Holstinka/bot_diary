@@ -6,7 +6,6 @@ import openpyxl
 import os
 from openpyxl import load_workbook
 import conf as cnf
-import aiogram
 from aiogram import F, Router, types, Dispatcher, Bot
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 from aiogram.filters import Command, StateFilter
@@ -16,7 +15,6 @@ from aiogram.fsm.storage.base import StorageKey
 from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.types import FSInputFile
 from datetime import datetime
-import os
 import logging
 
 logging.basicConfig(level=logging.INFO)
