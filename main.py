@@ -51,14 +51,14 @@ async def start(message: types.Message):
     if os.path.exists(f'diary_{name_user}.xlsx'):
         kb = InlineKeyboardBuilder()
         kb.add(types.InlineKeyboardButton(
-        text = 'Добавить запись',
-        callback_data = 'city'))
+            text = 'Добавить запись',
+            callback_data = 'city'))
         await message.answer(f'Здравствуй, {message.from_user.first_name}', reply_markup=kb.as_markup())
     else:
         kb = InlineKeyboardBuilder()
         kb.add(types.InlineKeyboardButton(
-        text = 'Начать вести дневник',
-        callback_data = 'to_start'))
+            text = 'Начать вести дневник',
+            callback_data = 'to_start'))
         await message.answer(f'''Здравствуй, {message.from_user.first_name} 
         Я твой персональный помошник
         по отслеживанию твоего ментального
